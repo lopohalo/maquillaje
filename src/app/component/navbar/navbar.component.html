@@ -1,0 +1,165 @@
+<style>
+    .navbar {
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      animation: navbarAnimation 0.3s;
+    }
+
+    @keyframes navbarAnimation {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled .navbar-brand {
+      font-size: 18px;
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 15px;
+    }
+
+    .navbar-nav .nav-item:last-child {
+      margin-right: 0;
+    }
+
+    .navbar-nav .nav-link {
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled .navbar-nav .nav-link {
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    .btn-login {
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled .btn-login {
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+  </style>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <h1 style="font-family: cursive;">Tu peluqueria</h1>
+      <a class="navbar-brand" href="#"><img src="\assets\img\logo.png" class="logo-img"  alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVICIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PRODUCTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">EDUCACIÓN</a>
+          </li>
+        </ul>
+        <ng-template [ngIf]="pepe.length > 0" [ngIfElse]="loading" >
+            <h2>Hola {{pepe}}</h2>
+            <button
+            class="btn btn-outline-success btn-cerrar"
+            (click)="cerrarSesion()"
+            type="button"
+            >
+                Cerrar Sesión
+            </button>
+        </ng-template>
+        <ng-template #loading>
+            <button class="btn btn-outline-success" type="button" (click)="openModal()">Iniciar Sesión</button>
+        </ng-template>
+
+       
+
+        <!-- Modal -->
+        <div class="modal" [ngClass]="{'show': modalOpen}">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="text-align: center; background-color: rgb(0, 0, 0);">
+                <h5 class="modal-title" style="color: white;">Iniciar Sesión</h5>
+                <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+              </div>
+              <div class="modal-body">
+                <form
+                                [formGroup]="productoForm"
+                            >
+                            <label for="email">Correo Electronico</label>
+                            <div class="input-group" style="margin-bottom: 40px;">
+                                <input formControlName="email"  class="input--style-1" type="email" id="email" placeholder="Ej. jsebg.ruedat@gmail.com">
+                                <span  class="icon"><i style="bottom: 1.6rem; " class="fa-solid fa-at i"></i></span>
+                                <div id="emailHelp" class="form-text">
+                                    Nosostros no compartiremos tu correo con
+                                    alguien más.
+                                </div>
+                                    <span class="error"  *ngIf="productoForm.get('email')?.hasError('pattern')">Correo invalido</span> 
+                                     <span class="error" *ngIf="productoForm.get('email')?.hasError('required') && productoForm.get('email')?.touched">Correo Obligatorio</span>
+
+
+                            </div>
+
+                                <div class="mb-5">
+                                    <label for="password"> Contraseña</label>
+                            <div class="input-group">
+                                <input formControlName="password"  data-contra="false"  data-muestraj="false" id="password" #password class="input--style-1" id="password" type="password" style="padding-left: 28px;" placeholder="Orlando123@">
+                                <span #boton ><i #icocontra class="fa-solid fa-lock candado"></i></span>
+                                 <span #boton (click)="cambio1()" class="icon"><img #img class="i imagen-icono"src="./assets/img/eye-slash-solid.svg"/></span> 
+
+                            </div>
+                                    <div id="contraseña" class="form-text1">
+                                        Nunca compartas tu contraseña con
+                                        alguien más.
+                                    </div>
+                                    <span class="error" style="top: 38px;" *ngIf="productoForm.get('password')?.hasError('required') && productoForm.get('password')?.touched">Contraseña Obligatorio</span>
+                                </div>
+                            </form>
+              </div>
+              <div class="modal-footer text-center">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <button type="submit" (click)="Analizando()" class="btn btn-primary">Aceptar</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary" style="background-color: red;" (click)="closeModal()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
+    
+      </div>
+    </div>
+</nav>
