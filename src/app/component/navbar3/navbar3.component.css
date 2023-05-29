@@ -29,6 +29,10 @@
     transform: translateX(-50%);
   }
   @media (max-width: 767px) {
+    .logo-img{
+      width: 20px;
+      height: 20px;
+    }
     .texto-titulo-lugares{
       font-size: 30px !important;
     }
