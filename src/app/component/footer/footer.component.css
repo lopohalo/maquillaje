@@ -410,6 +410,22 @@ body {
   position: relative;
 }
 @media (max-width: 768px) {
+  .texto_responsive{
+    font-size: 15px !important;
+  }
+  .text_responsive3{
+    visibility: hidden;
+  }
+  .texto_responsive2{
+    font-size: 10px !important;
+  }
+  .text_responsive4{
+    margin-top: -40px !important;
+  }
+  .imagenResponsive{
+    width: 80px !important;
+    height: 100px;
+  }
   .partner-title{
     margin-top: 23px !important;
   }
@@ -428,9 +444,6 @@ body {
   }
   .cartas{
     width: 100% !important;
-  }
-  .dividor{
-    height: 100% !important;
   }
   .container{
     height: 465px !important;

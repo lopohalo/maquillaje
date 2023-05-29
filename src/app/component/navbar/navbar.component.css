@@ -9,6 +9,149 @@
     z-index: 1050;
     overflow: auto; /* Permitir scroll dentro del modal */
   }
+  .left-text {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+  }
+  .left-text:hover{
+    cursor: pointer;
+  }
+  .btn-iniciar-sesion {
+    border: none !important;
+    background-color: transparent !important;
+    color: #e81539 !important;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+  }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    transition: top 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-top {
+    top: 40px;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  .centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .navbar.scrolled {
+    top: -40px;
+  }
+  
+  .cart-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .btn-link {
+    text-decoration: none;
+    color: #000;
+  }
+  @media (max-width: 1400px) {
+    .navbar-top {
+      top: 85px;
+    }
+    .navbar.scrolled {
+      top: -110px;
+    }
+    
+    
+    .navbar-content {
+      padding: 10px;
+    }
+    
+    .centered-content {
+      justify-content: flex-start;
+    }
+    
+    .navbar-text {
+      margin-right: 0;
+    }
+  }
+  
+  .icono-usuario {
+    margin-right: 5px;
+  }
+  @media (max-width: 768px) {
+    .navbar-text {
+      font-size: 12px;
+    }
+    }
+  
+  @media (max-width: 991px) {
+    .left-text {
+      display: none;
+    }
+  }
+ 
+  
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 30px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+    margin-right: 5px; /* Espacio entre el logo y el campo de búsqueda */
+  }
+  .location-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #e81539 !important; /* Color rosa */
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .button-icon {
+    margin-right: 5px;
+  }
+  
+  .button-text {
+    white-space: nowrap;
+  }
+  
+  .search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 
   
   .modal.show {
@@ -19,8 +162,9 @@
     width: 89px;
   }
   .btn {
-    color: #ffffff;
-    background-color: #000000;
+    border: 1px solid black;
+    color: #000000;
+    background-color: #00000000;
 }
 .navfija {
     background: #eff5fadc;
@@ -89,7 +233,7 @@ input {
     box-shadow: none;
     width: 100%;
     font-size: 14px;
-    font-family: inherit;
+    font-style: italic;
 }
 .form-text{
     display: block;

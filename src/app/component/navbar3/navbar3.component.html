@@ -1,0 +1,154 @@
+<section class="partner-area ptb-100 mt-5 mb-5" style="margin-top: 150px  !important;">
+  
+    <div class="text-center mb-2 texto-responsive">
+        <h1 style="    color: #000;
+        display: flex;
+        flex-direction: column;
+        font-size: 50px;
+        height: 100%;
+        font-weight: 700;
+        padding: 0;
+        font-style: italic;
+        position: relative;
+        text-align: center;">Nuestras <span style="font-size: 40px; color: pink;">10</span>  mejores calificadas</h1>
+    </div>
+    <swiper-container appSwiperDirective [config]="config" class="container" [slidesPerView]="5"
+        [pagination]="{ clickable: true }" [navigation]="true" (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()" style="text-align: center; height: 400px;">
+        
+        <swiper-slide class="single-item" >
+            <div class="card" style="width: 18rem;">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipM4LGyQttI_J-Fy3R01nftTI0CLRbbPhdzAwy0f=s1360-w1360-h1020" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+                <div class="card-body" style="border: none;">
+                  <h5 class="card-title" style="font-style: italic; color: #000;">Bettys <br> Peluqueria</h5>
+                  <div class="rating">
+                    <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i> 5.0</span>
+                  </div>
+                </div>
+              </div>
+      </swiper-slide>
+      <swiper-slide class="single-item" style="margin-left: 40px;">
+        <div class="card" style="width: 18rem;">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/876/249/original/hair-salon-logo-gold-with-black-background-png.png" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+            <div class="card-body" style="border: none;">
+              <h5 class="card-title" style="font-style: italic; color: #000;">Verve Salon <br> Peluqueria</h5>
+              <div class="rating">
+                <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i> 4.5</span>
+              </div>
+            </div>
+          </div>
+  </swiper-slide>
+  <swiper-slide class="single-item" style="margin-left: 40px;">
+    <div class="card" style="width: 18rem;">
+        <img src="https://png.pngtree.com/png-clipart/20221006/original/pngtree-barbershop-logo-png-image_8658660.png" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+        <div class="card-body" style="border: none;">
+          <h5 class="card-title" style="font-style: italic; color: #000;">Celestial Coiffure<br> Peluqueria</h5>
+          <div class="rating">
+            <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i> 4.8</span>
+          </div>
+        </div>
+      </div> 
+</swiper-slide>
+<swiper-slide class="single-item" style="margin-left: 40px;">
+    <div class="card" style="width: 18rem;">
+        <img src="https://static.comunicae.com/photos/notas/1137322/1455531827_masaje3.png" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+        <div class="card-body" style="border: none;">
+          <h5 class="card-title" style="font-style: italic; color: #000;">Madrid<br> Masajes</h5>
+          <div class="rating">
+            <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i> 5.0</span>
+          </div>
+        </div>
+      </div>
+</swiper-slide>
+<swiper-slide class="single-item" style="margin-left: 40px;">
+    <div class="card" style="width: 18rem;">
+        <img src="https://us.123rf.com/450wm/gdesignin/gdesignin2009/gdesignin200902578/186642715-icono-de-sesi%C3%B3n-de-masaje-aislado-sobre-fondo-blanco-icono-de-sesi%C3%B3n-de-masaje-en-estilo-de-dise%C3%B1o.jpg?ver=6" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+        <div class="card-body" style="border: none;">
+          <h5 class="card-title" style="font-style: italic; color: #000;">Serenity Spa<br> Masajes</h5>
+          <div class="rating">
+            <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i> 4.4</span>
+          </div>
+        </div>
+      </div>
+</swiper-slide>
+<swiper-slide class="single-item" style="margin-left: 40px;">
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.zarla.com/images/zarla-renacer-1x1-2400x2400-20210630-cpbttwhm3ywj9yx9dkkb.png?crop=1:1,smart&width=250&dpr=2" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+        <div class="card-body" style="border: none;">
+          <h5 class="card-title" style="font-style: italic; color: #000;">Renacer<br> Masajes</h5>
+          <div class="rating">
+            <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i> 4.6</span>
+          </div>
+        </div>
+      </div>
+</swiper-slide>
+<swiper-slide class="single-item" style="margin-left: 40px;">
+    <div class="card" style="width: 18rem;">
+        <img src="https://i.pinimg.com/originals/2f/c4/17/2fc4175fb07fcf03860eb46571a97000.png" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+        <div class="card-body" style="border: none;">
+          <h5 class="card-title" style="font-style: italic; color: #000;">Darla<br> Consultorio Estetica</h5>
+          <div class="rating">
+            <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i>5.0</span>
+          </div>
+        </div>
+      </div>
+</swiper-slide>
+<swiper-slide class="single-item" style="margin-left: 40px;">
+  <div class="card" style="width: 18rem;">
+      <img src="https://www.immaginebenessere.com/wp-content/uploads/2019/07/logo-centro-estetico-sora-immagine-e-benessere-bianco.png" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+      <div class="card-body" style="border: none;">
+        <h5 class="card-title" style="font-style: italic; color: #000;">Imaginne y bessere<br> Consultorio Estetica</h5>
+        <div class="rating">
+          <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i>5.0</span>
+        </div>
+      </div>
+    </div>
+</swiper-slide>
+<swiper-slide class="single-item" style="margin-left: 40px;">
+  <div class="card" style="width: 18rem;">
+      <img src="https://mhcentrodebelleza.com/cmsAdmin/uploads/o_1dkl6fn2l7a9kf947g17t12lga.png" style="width: 250px; height: 150px;" class="card-img-top" alt="...">
+      <div class="card-body" style="border: none;">
+        <h5 class="card-title" style="font-style: italic; color: #000;">Maria Hernandez<br> Consultorio Estetica</h5>
+        <div class="rating">
+          <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i>5.0</span>
+        </div>
+      </div>
+    </div>
+</swiper-slide>
+    </swiper-container>
+</section>
+
+<div>
+  <h1 class="texto-titulo-lugares" style="font-style: italic; font-size: 3.5rem; color: pink; font-weight: 400;">Lugares cerca a tu ubicación</h1>
+</div>
+
+<div class="row justify-content-center text-center p-3">
+  <div *ngFor="let elemento of datos" class="col-6 col-md-3 col-sm-3">
+    <div class="card" style="width: 100% !important; padding: 0px !important;">
+      <div class="image-container">
+        <img [src]="elemento.imagen" style="width: 100%; height: 150px;" class="card-img-top" alt="...">
+        <div class="logo-circle">
+          <img src="https://static.vecteezy.com/system/resources/previews/018/876/249/original/hair-salon-logo-gold-with-black-background-png.png" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;" class="logo-img" alt="Logo">
+        </div>
+      </div>
+      <div class="card-body" style="border: none;">
+        <h5 class="card-title" style="font-style: italic; color: #000;">{{elemento.nombre}}</h5>
+        <div class="rating">
+          <span class="stars" style="color: rgb(204, 15, 211); font-size: 25px;"><i class="fas fa-star"></i>{{elemento.calificacion}}</span>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<div class="row">
+  <div class="col-12 text-start" style="font-style: italic; font-size: 3.5rem; color: pink; font-weight: 400;">
+    <h1>Ubicaciones</h1>
+  </div>
+  <div class="col-12">
+    <img class="imagen-responsive" src="\assets\img\mapa.png" width="100% !important;" alt="">
+  </div>
+</div>
+
+
+

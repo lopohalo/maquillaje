@@ -1,0 +1,76 @@
+.card {
+    background-color: #fcfcfc;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    transform: translateY(-50px);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+
+  .card-link {
+    text-decoration: none;
+  }
+  
+  .card:hover {
+    transform: translateY(0);
+  }
+  .image-container {
+    position: relative;
+  }
+  
+  .logo-circle {
+    background-color: black;
+    position: absolute;/* Ajusta este valor según sea necesario para posicionar el logotipo */
+    left: 10%;
+    border-radius: 50px;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 767px) {
+    .texto-titulo-lugares{
+      font-size: 30px !important;
+    }
+    .imagen-responsive{
+      width: 470px !important;
+      height: 300px !important;
+    }
+    .texto-responsive {
+      margin-top: 50px !important;
+    }
+    .single-item{
+      margin-right: 40px !important;
+    }
+  
+    .texto-responsive h1 {
+      font-size: 30px !important;
+    }
+  
+    .swiper-slide {
+      margin-right: 0 !important;
+      width: 80% !important;
+    }
+  
+    .card {
+      width: 10rem !important;
+      max-width: 300px !important;
+      height: auto !important;
+    }
+  
+    .card-img-top {
+      width: 100% !important;
+      height: 70px !important;
+    }
+  
+    .card-title {
+      font-size: 10px !important;
+    }
+  
+    .rating {
+      font-size: 14px !important;
+    }
+  }
+  
+  
+  

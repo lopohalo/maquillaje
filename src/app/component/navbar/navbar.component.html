@@ -1,86 +1,42 @@
-<style>
-    .navbar {
-      transition: all 0.3s ease;
-    }
+<nav class="navbar navbar-top" style="background-color: rgb(249,226,231); justify-content: center;" [ngClass]="{'scrolled': isNavbarScrolled}">
+  <div class="navbar-content">
+    <div class="centered-content">
+      <span class="navbar-text" style="margin-right: 12px; font-style: italic;"><strong>LOS MEJORES PRODUCTOS DE BELLEZA Y AUTOCUIDADO.</strong> AL MEJOR PRECIO. CÓDIGO: DELIVER200.</span>
+      <button class="btn btn-link" [routerLink]="['/productos_carrito']">Ver productos</button>
+    </div>
+  </div>
+  <div class="cart-icon">
+    <i class="fas fa-shopping-cart" style="
+    font-size: 25px;
+"></i>
+  </div>
+</nav>
 
-    .navbar.scrolled {
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      animation: navbarAnimation 0.3s;
-    }
-
-    @keyframes navbarAnimation {
-      from {
-        transform: translateY(-100%);
-      }
-      to {
-        transform: translateY(0);
-      }
-    }
-
-    .navbar-brand {
-      font-size: 24px;
-      transition: all 0.3s ease;
-    }
-
-    .navbar.scrolled .navbar-brand {
-      font-size: 18px;
-    }
-
-    .navbar-nav {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .navbar-nav .nav-item {
-      margin-right: 15px;
-    }
-
-    .navbar-nav .nav-item:last-child {
-      margin-right: 0;
-    }
-
-    .navbar-nav .nav-link {
-      transition: all 0.3s ease;
-    }
-
-    .navbar.scrolled .navbar-nav .nav-link {
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-
-    .btn-login {
-      transition: all 0.3s ease;
-    }
-
-    .navbar.scrolled .btn-login {
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-  </style>
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light    fixed-top" >
     <div class="container">
-        <h1 style="font-family: cursive;">Tu peluqueria</h1>
-      <a class="navbar-brand" href="#"><img src="\assets\img\logo.png" class="logo-img"  alt=""></a>
+      <div class="left-text" [routerLink]="['/']" style="font-style: italic; font-size: 40px;">Divas Pay</div>
+      <button class="location-button" style="margin-left: 140px;">
+        <span class="button-icon"><i class="fas fa-map-marker-alt"></i></span>
+        <span class="button-text">Ingresa tu ubicación</span>
+      </button>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">SERVICIOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">PRODUCTOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">EDUCACIÓN</a>
-          </li>
-        </ul>
+        <div class="search-container" style="max-width: 750px; width: 100%; display: flex; align-items: center;">
+          <img src="https://static.vecteezy.com/system/resources/previews/018/876/249/original/hair-salon-logo-gold-with-black-background-png.png" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;" alt="Logo" class="logo" style="width: 36px;
+          height: 37px;
+          /* margin-right: 5px; */
+          margin-right: -3px;
+          border-radius: 2px;
+          padding: 5px;
+          background-color: white;">
+          <input type="text" placeholder="Peluquerias, educación, manicure, productos..." class="search-input" style="flex: 1; padding: 8px; border: none; border-radius: 5px;">
+          <button type="submit" class="search-button" style="padding: 8px; border: none; background-color: transparent; cursor: pointer;"><i class="fa fa-search"></i></button>
+        </div>
+        
         <ng-template [ngIf]="pepe.length > 0" [ngIfElse]="loading" >
             <h2>Hola {{pepe}}</h2>
             <button
@@ -92,7 +48,10 @@
             </button>
         </ng-template>
         <ng-template #loading>
-            <button class="btn btn-outline-success" type="button" (click)="openModal()">Iniciar Sesión</button>
+          <button class="btn btn-iniciar-sesion" type="button"  style="margin-left: auto;" (click)="openModal()">
+            <i  class="fas fa-user icono-usuario"></i>
+            Iniciar Sesión
+          </button>
         </ng-template>
 
        
@@ -101,8 +60,8 @@
         <div class="modal" [ngClass]="{'show': modalOpen}">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header" style="text-align: center; background-color: rgb(0, 0, 0);">
-                <h5 class="modal-title" style="color: white;">Iniciar Sesión</h5>
+              <div class="modal-header" style="text-align: center; background-color: rgb(244,198,207)">
+                <h5 class="modal-title" style="color: rgb(0, 0, 0); font-style: italic;">Iniciar Sesión</h5>
                 <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
               </div>
               <div class="modal-body">
@@ -141,25 +100,19 @@
               </div>
               <div class="modal-footer text-center">
                 <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="width: 100% !important;">
                     <div class="col-6">
                         <button type="submit" (click)="Analizando()" class="btn btn-primary">Aceptar</button>
                     </div>
                     <div class="col-6">
-                        <button type="button" class="btn btn-secondary" style="background-color: red;" (click)="closeModal()">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" style="background-color: rgb(244,198,207); border: none;" (click)="closeModal()">Cancelar</button>
                     </div>
                 </div>
-            </div>
-
-               
+            </div> 
               </div>
             </div>
           </div>
         </div>
-        
-        
-
-    
       </div>
     </div>
 </nav>

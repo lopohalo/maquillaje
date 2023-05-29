@@ -6,6 +6,9 @@ import { PrincipalComponent } from './component/principal/principal.component';
 import { Footer2Component } from './component/footer2/footer2.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Navbar3Component } from './component/navbar3/navbar3.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CarritoComponent } from './component/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +16,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     PrincipalComponent,
     Footer2Component,
-    NavbarComponent
+    NavbarComponent,
+    Navbar3Component,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
 
   ],
   providers: [],

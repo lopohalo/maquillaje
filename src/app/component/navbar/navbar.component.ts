@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2'
@@ -28,6 +28,13 @@ export class NavbarComponent implements OnInit{
           password: ['', Validators.required],
       })
   }
+  isNavbarScrolled: boolean = false;
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.isNavbarScrolled = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop) > 0;
+  }
+
   Analizando() {
     let obj = {
       correo: "equipoDeTrabajo@gmail.com",
